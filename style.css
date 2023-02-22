@@ -1,0 +1,45 @@
+.bg-container {
+    border: 2px solid green ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.container {
+    align-self: center;
+}
+
+.heading {
+    color: Green;
+}
+
+.span-styling {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+.button {
+    color: white;
+    background-color: blue;
+    height: 40px;
+    width: 120px;
+    border-width: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.input-box {
+    margin-right: 10px;
+    border: 2px solid black;
+    height: 40px;
+    width: 300px;
+}
