@@ -3,6 +3,7 @@ let primeEl = document.getElementById("primeInput");
 let factorialEl = document.getElementById("factorialInput");
 let fibonacciEl = document.getElementById("fibonacciInput");
 let primeButton = document.getElementById("primeButton");
+let armstrongEl = document.getElementById("armstrong");
 
 
 
@@ -56,3 +57,18 @@ function clickedFibonacci(){
     fibonacciEl.textContent = result;
 }
 
+function clickedArmstrong(){
+    let inputValString= document.getElementById("userInput").value;
+    let length = inputValString.length;
+    let sum = 0;
+    for (let num of inputValString){
+        sum += parseInt(num)**length;
+    }
+
+    if (sum === parseInt(inputValString)){
+        armstrongEl.textContent = `${inputValString}  is an Armstrong Number`;
+
+    }else{
+        armstrongEl.textContent = `${inputValString} is not an Armstrong Number`;
+    }
+}
