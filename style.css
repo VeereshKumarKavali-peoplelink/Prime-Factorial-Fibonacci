@@ -9,10 +9,13 @@
 .buttons-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
 
 }
-
+.label-input-container {
+    margin-left: 110px;
+}
 .container {
     align-self: center;
 }
@@ -41,5 +44,16 @@
     margin-right: 10px;
     border: 2px solid black;
     height: 40px;
+    width: 300px;
+}
+
+.pattern-button-container {
+    align-self: center;
+
+}
+
+.pattern-container {
+    padding: 20px;
+    border: 2px solid black;
     width: 300px;
 }

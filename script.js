@@ -4,7 +4,8 @@ let factorialEl = document.getElementById("factorialInput");
 let fibonacciEl = document.getElementById("fibonacciInput");
 let primeButton = document.getElementById("primeButton");
 let armstrongEl = document.getElementById("armstrong");
-
+let patternEl = document.getElementById("pattern");
+let patternContainerEl = document.getElementById("patternContainer");
 
 
 
@@ -57,6 +58,8 @@ function clickedFibonacci(){
     fibonacciEl.textContent = result;
 }
 
+
+
 function clickedArmstrong(){
     let inputValString= document.getElementById("userInput").value;
     let length = inputValString.length;
@@ -72,3 +75,63 @@ function clickedArmstrong(){
         armstrongEl.textContent = `${inputValString} is not an Armstrong Number`;
     }
 }
+
+
+function clickedPattern(){
+    patternContainerEl.textContent = "";
+    let inputVal = parseInt(document.getElementById("userInput").value);
+
+
+    let paragraphEl;
+    function createParagraphEl(){
+        paragraphEl = document.createElement("p");
+        patternContainerEl.appendChild(paragraphEl);
+    }
+
+
+   
+    let result = "";
+    let unicode = 97;
+    for (i=0; i < inputVal; i++){
+
+        if (i === 0){
+            result = result + String.fromCharCode(unicode);
+            createParagraphEl();
+            paragraphEl.textContent = result;
+        }else if (i>=1 && i%2 !== 0){
+            result = "";
+
+            for (num=1; num <= i+1; num++){
+                result = result + " " + num;
+            }
+
+            createParagraphEl();
+            paragraphEl.textContent = result;
+
+        }else{
+            unicode += 1;
+
+            result=""; 
+            result = result + (String.fromCharCode(unicode) + " ").repeat(i);
+
+            createParagraphEl();
+            paragraphEl.textContent = result;
+        } 
+    }
+
+}
+
+
+
+
+
+
+document.getElementById("userInput").addEventListener("keyup", (event)=>{
+    if (event.target.value === "") {
+        primeEl.textContent = "";
+        factorialEl.textContent ="";
+        fibonacciEl.textContent = "";
+        armstrongEl.textContent= "";
+        patternContainerEl.textContent = "";
+    }
+})

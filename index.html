@@ -13,27 +13,36 @@
             <p class="phone-number">Phone No:- <span class="span-styling">9989379112</span></p>
         </div>
         <div class="container">
+            <div class="label-input-container">
             <label for="userInput">Enter Number:</label>
             <input type="text" id="userInput" placeholder="Enter a number here"/>
+            </div>
             <div class="buttons-container">
-                <div class="prime-container">
+                <div class="container">
                     <button class="button" id="primeButton">Prime</button>
                     <p id="primeInput" class="input-box"></p>
                 </div>
-                <div class="factorial-container">
+                <div class="container">
                     <button class="button" onclick="clickedFactorial()">Factorial</button>
                     <br />
                     <p id="factorialInput" class="input-box"></p>
                 </div>
-                <div class="fibonacci-container">
+                <div class="container">
                     <button class="button" onclick="clickedFibonacci()">Fibonacci</button>
                     <br/>
                     <p id="fibonacciInput" class="input-box"></p>
                 </div>
-                <div class="fibonacci-container">
+                <div class="container">
                     <button class="button" onclick="clickedArmstrong()">Armstrong</button>
                     <br/>
                     <p id="armstrong" class="input-box"></p>
+                </div>
+                <div class="pattern-button-container">
+                    <button class="button" onclick="clickedPattern()">Pattern</button>
+                    <br/> 
+                    <div id="patternContainer" class="pattern-container">
+                    
+                    </div>
                 </div>
                 
             </div>
@@ -44,6 +53,8 @@
 
 
 
-        <script src="script.js"></script>
+        <script src="script.js">
+            
+        </script>
     </body>
 </html>
